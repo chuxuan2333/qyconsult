@@ -1,0 +1,112 @@
+
+配置TOLL MAILING MANAGER(TMAIL v1.1)的步骤:
+
+1, 下载TmailMMS11.rar的php源代码,1.2M,解压,上载maillist/和index.php(改名tmail.php)到支持php和mysql的服务器上
+
+2, 远程运行maillist/install
+类似下面的参数需要设置(管理员登陆密码, 数据库密码设置等等)
+$main_dir = "maillist/";
+$website = "http://www.ruicuntech.com/";
+$relative_string="tmail.php?page=mail&";
+$absolute_path="/data/home/qxu0020113/htdocs/maillist/install/";
+$user="admin";
+$pass="********";
+$database="mysql";
+$dbhostname="qdm-048.hichina.com";
+$dbusername="qdm0480072";
+$dbpassword="********";
+$dbname="qdm0480072_db";
+
+install运行好之后,不仅修改了globals.php文件,还在数据库中增加了4个wiml_mailgroup等表.
+注意!如果数据库没有经过配置,wiml_*的表不存在,php程序就会出错:
+Fatal error: Call to a member function GetArray() on a non-object in /data/home/qxu0020113/htdocs/maillist/admin/editg.php on line 175
+
+3, 修改globals.php文件,去掉install
+$absolute_path="/data/home/qxu0020113/htdocs/maillist/";
+
+运行maillist/admin.php 配置其它基本参数.
+
+4, 参数设置-->邮件服务器 SMTP设置
+系统提供3种邮件发送方式:PHP's mail, Sendmail, SMTP
+如果网站不支持前面两种,可以选择配置SMTP
+万网为例:
+$mserver="smtp";
+$sendmail_string="";
+$smtp_string="smtp.mxhichina.com";
+$smtp_auth="yes";
+$smtp_username="info@ruicuntech.com";
+$smtp_password="********";
+
+如果发送邮件时候出现类似错误
+Notice: Undefined variable: errno in /data/home/qxu0020113/htdocs/maillist/admin/class/phpmailer/class.smtp.php on line 103
+
+Notice: Undefined variable: errstr in /data/home/qxu0020113/htdocs/maillist/admin/class/phpmailer/class.smtp.php on line 104
+
+Warning: fsockopen() has been disabled for security reasons in /data/home/qxu0020113/htdocs/maillist/admin/class/phpmailer/class.smtp.php on line 105
+
+需要到主页空间提供方（例如万网）的主机管理平台的高级环境设置-->PHP.ini设置
+PHP函数fsockopen设置 为 启用
+
+如果是自己的主机，可以直接修改PHP.ini 的 disable_functions =  和  allow_url_fopen = On
+
+如果无法修改php.ini, 搜索“空间不支持fsockopen函数解决办法”结果如下：
+
+-----------------------------------------------------------------------------
+二、如何解决fsockopen函数被禁用
+
+1、如果服务器没有同时禁用pfsockopen，那么直接将fsockopen函数替换为pfsockopen。
+ 具体操作：搜索程序中的字符串  fsockopen(   替换为  pfsockopen(   。示例如下
+ 修改前：
+
+ 代码如下 复制代码 
+
+$fp = fsockopen($host, 80, $errno, $errstr, 30);
+
+修改后：
+ 
+
+$fp = pfsockopen($host, 80, $errno, $errstr, 30);
+ 
+
+
+ 2、如果服务器同时禁用了pfsockopen，那么用其他函数代替，如stream_socket_client()。注意：stream_socket_client()和fsockopen()的参数不同。
+ 具体操作：搜索程序中的字符串  fsockopen(   替换为  stream_socket_client(   ，然后，将原fsockopen函数中的端口参数“80”删掉，并加到$host。示例如下
+ 修改前：
+ 
+
+ 代码如下 复制代码 
+
+$fp = fsockopen($host, 80, $errno, $errstr, 30);
+
+修改后
+ 
+
+$fp = stream_socket_client($host."80", $errno, $errstr, 30);
+ 
+
+
+ 3、如果PHP版本低于5.0，fsockopen被禁用，又没有stream_socket_client()怎么办呢？自己写一个函数实现fsockopen的功能，参考代码：
+
+ 代码如下 复制代码 
+ 
+function b_fsockopen($host, $port, &$errno, &$errstr, $timeout) {
+  $ip = gethostbyname($host);
+  $s = socket_create(AF_INET, SOCK_STREAM, 0);
+  if (socket_set_nonblock($s)) {
+   $r = @socket_connect($s, $ip, $port);
+   if ($r || socket_last_error() == EINPROGRESS) {
+    $errno = EINPROGRESS;
+    return $s;
+   }
+  }
+  $errno = socket_last_error($s);
+  $errstr = socket_strerror($errno);
+  socket_close($s);
+  return false;
+ }  
+具体操作：
+
+1.首先找到使用fsockopen函数的代码段，将上面代码加至其上端，搜索该代码段中的字符串  fsockopen(   替换为  b_fsockopen(   
+。
+2.因为fsockopen函数返回文件指针所以可以被文件函数操作，但是这个b_fsockopen函数没能返回文件指针，需要继续修改代码段：用socket_read(   替换掉  fread(   ，用socket_write(   替换掉fwrite(   ，用socket_close(   替换掉fclose(   。
+-----------------------------------------------------------------   

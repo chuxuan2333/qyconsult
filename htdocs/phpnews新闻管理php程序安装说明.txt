@@ -1,0 +1,33 @@
+1.sourceforge.net网站下载php程序源代码包:
+https://sourceforge.net/projects/newsphp/
+phpnews_1-3-0.zip  134k大小
+
+2.解压上载到服务器,主体内容都在phpnews/目录下
+
+3.阅读readme.html文件Installing PHPNews 栏目,依照执行
+
+4.远程运行phpnews/install.php (非原安装包,此文件已经被删除!!)
+安装程序会修改配置文件,以及生成数据库新的表,例如phpnews_settings表
+不运行这个install, 可能看到以下类似错误:
+Table 'qdm0480072_db.phpnews_settings' doesn't exist
+
+系统仅仅支持英语,德语,北欧语. 运行后,提示要求删除install.php!:
+You must remove the install.php file before beginning the use of PHPNews.
+
+5,数据库配置在settings.php中,类似配置:
+$db_name = "qdm0480072_db";
+
+$db_user = "qdm0480072";
+
+$db_passwd = "********";
+
+$db_server = "qdm-048.hichina.com";
+
+$db_prefix = "phpnews_";
+
+6. 远程运行phpnews/index.php
+
+7. 在自己网页中使用新闻的方法:
+<?php
+ include("path/to/phpnews/news.php");
+ ?> 

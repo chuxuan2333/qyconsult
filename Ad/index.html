@@ -1,0 +1,1114 @@
+﻿
+
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="g_html">
+
+<head>
+
+<title>alevel,igcse,ib,ap,ucas</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="renderer" content="webkit">
+<script type="text/javascript">
+  var _cid = 7249253;
+</script>
+
+<meta name="mobile-agent" content="format=html5;url=http://m.qyconsult.com/"/>
+
+<meta name="keywords" content="alevel辅导,pastpaper,igcse教辅,ib资料,ap笔记"/>
+<meta name="description" content="群尧咨询是致力于ALEVEL、IB、AP等国际课程辅导与培训的专业机构，旨在帮助学员解决在学习ALEVEL、IB、AP等国际课程过程中所遇到的疑难与困惑。快速了解并掌握国际课程的精髓和灵魂，实现世界名校的梦想！"/>
+
+
+
+<link rel='canonical' href='http://www.qyconsult.com'>
+
+
+
+<link type="text/css" href="http://2.ss.faisys.com/css/base.min.css?v=201611221556" rel="stylesheet" />
+<link type="text/css" href="http://2.ss.faisys.com/css/template/17001.min.css?v=201610311810" rel="stylesheet" id="templateFrame"  class="templateFrameClass"/>
+
+<link type="text/css" href="http://2.ss.faisys.com/css/site/poshytipAndmCustomScrollbar.min.css?v=201604181741" rel="stylesheet" />
+
+
+
+
+
+
+<style id='stylemodule'>
+#module361 .fk-formContentOther {display:none;}
+#module361 .fk-formContentOtherPadding {padding-top:0;}
+#module361 .formBanner361 .formBannerTitle .titleCenter{display:table-cell;}
+#module361 .formBanner361 div.titleText{display:block;}
+#module361 .contentLineIcon {*padding:0;}
+#module361 .contentLineIcon {*width:0;}
+</style>
+<style id='styleHeaderTop' type='text/css'>
+</style>
+<style id='stylefooter' type='text/css'>
+#webFooterTable div.footerVerticalLine{background-color:#7e7d7d;}
+#webFooterTable div.footerItemTop .footerItemTopLink{font-weight:normal;}
+#webFooterTable div.footerItemTop .footerItemTopLink{text-decoration:none;}
+#webFooterTable div.footerItemTop .footerItemTopLink{color:#7e7d7d;}
+</style>
+<style id='styleWebSite' type='text/css'>
+#memberBar{width:960px;}
+#webTop{width:960px;}
+#absTopForms{width:960px;}
+.webNavDefault{width:960px;}
+#webHeader{width:960px;}
+#webBanner{width:960px;}
+#absForms{width:960px;}
+#webContainer{width:960px;}
+#absBottomForms{width:960px;}
+#webFooter{width:960px;}
+div.webNav .navMainContent{width:960px;}
+div.nav .navMainContent{width:960px;}
+.fullmeasureContent{width:960px;}
+</style>
+<style id='styleBannerBg' type='text/css'>
+</style>
+<style id='stylenav' type='text/css'>
+#nav .navContent {background-size: contain;}
+#nav  .navLeft{background-size: 100% 100%;}
+#nav  .navRight{background-size: 100% 100%;}
+#nav  .navCenterContent{background-size: contain;}
+</style>
+<style id='styleTitle' type='text/css'>
+</style> 
+
+
+
+
+
+
+<script type="text/javascript">
+(function(FUN, undefined){
+	var list = []; 
+	
+	FUN.run = function(){
+		if(arguments.length < 1){
+			throw new Error("jzUtils.run 参数错误");
+			return;
+		}
+		
+		var name = arguments[0].name, 
+			callMethod = arguments[0].callMethod || false, 
+			prompt = arguments[0].prompt || false, 
+			promptMsg = arguments[0].promptMsg || "功能还在加载中，请稍候", 
+			base = arguments[0].base || (window.Fai && Fai.top.Site) || top.Site || window, 
+			
+			args = Array.prototype.slice.call(arguments), 
+			funcArgs = args.slice(1), 
+			callbackFunc = {}, 
+			result; 
+
+		result = checkMethod(name, base);
+		if(result.success){
+			callMethod = false;
+			try{
+				result.func.apply(result.func, funcArgs); 
+			}catch(e){
+				console && console.log && console.log("错误:name="+ e.name +"; message="+ e.message);
+			}
+		}else{
+			if(prompt){
+				window.Fai && Fai.ing(promptMsg, true);
+			}
+		}
+		
+		
+		if(callMethod){
+			callbackFunc.name = name;
+			callbackFunc.base = base;
+			callbackFunc.args = funcArgs;
+			list.push(callbackFunc);
+		}
+	};
+	
+	
+	FUN.trigger = function(option){
+		if(typeof option !== "object"){
+			throw new Error("jzUtils.trigger 参数错误");
+			return;
+		}
+		
+		var funcName = option.name || "", 
+			base = option.base || (window.Fai && Fai.top.Site) || top.Site || window, 
+			newList = [], 
+			result, 
+			func, 
+			i, 
+			param; 
+		
+		if(funcName.length < 1){
+			return;
+		}
+		
+		
+		for(i = 0; i < list.length; i++){
+			param = list[i];
+			if(param.name == funcName){
+				result = checkMethod(funcName, base);
+				if( result.success ){
+					try{
+						result.func.apply(result.func, param.args);
+					}catch(e){
+						console && console.log && console.log("错误:name="+ e.name +"; message="+ e.message);
+					}
+				}
+			}else{
+				newList.push(param);
+			}
+		}
+		
+		list = newList;
+	};
+	
+	
+	function checkMethod(funcName, base){
+		var methodList = funcName.split("."), 
+			readyFunc = base, 
+			result = {
+				"success":true,
+				"func":function(){}
+			}, 
+			methodName, 
+			i;
+			
+		for(i = 0; i < methodList.length; i++){
+			methodName = methodList[i];
+			if(methodName in readyFunc){
+				readyFunc = readyFunc[methodName];
+			}else{
+				result.success = false;
+				return result;
+			}
+		}
+		
+		result.func = readyFunc;
+		return result; 
+	}
+})(window.jzUtils || (window.jzUtils = {}));
+</script>
+
+
+
+
+
+
+</head>
+
+<body class="webFooterTable" >
+
+	
+<script language="javascript" type="text/javascript">
+	function onLogout(){
+		$('#topBarMsg').show();
+		$('#topBarMsg').html('正在退出系统...');
+		$.ajax({
+			type: 'post',
+			url: 'ajax/login_h.jsp?cmd=logoutMember',
+			error: function(){
+				alert('退出系统失败');
+				$('#topBarMsg').hide();
+			},
+			success: function(result){
+				var result = jQuery.parseJSON(result);
+				if(result.success){
+					top.location.href = 'index.jsp';
+					return;
+				}
+				$('#topBarMsg').html('退出系统失败');
+			}
+		});
+	}
+</script>
+<div id="memberBarArea" class="memberBarArea g_editPanel">
+	<div id="arrow" class="g_arrow g_arrow_up"></div>
+	<div id="memberBar" class="memberBar">
+		
+
+
+
+
+	
+<!--  right end*/  -->
+
+	<div class='left'>
+	
+			<div style="float:left;margin-left: 8px;">
+				<a id="topBarMember_addBookMark" hidefocus='true' href='javascript:;' style="text-decoration:none;display:none;" onclick="Fai.addBookmark(top.document.title, 'http://www.qyconsult.com');">收藏本站</a>
+			</div>	
+	
+			<div id="line1" class="line" style="float:left;display:none;"></div>
+		
+			<div style="float:left;">
+				<a  id="topBarMember_myProfile" hidefocus="true" style="text-decoration:none;display:none;"  href="mCenter.jsp">我的资料</a>
+			</div>	
+	
+			<div id="line2" class="line" style="float:left;display:none;"></div>
+	
+			<div style="float:left;">
+				<a id="topBarMember_myOrder" hidefocus="true" style="text-decoration:none;display:none;" href="mCenter.jsp?item=memberOrder">我的订单</a>
+			</div>
+	
+			<div id="mallCartLine" class="line" style="display:none;margin-right: 0px;"></div>
+	
+			<div style="float:left;  margin-left: 15px;">
+				<div id="mallCart_js" class="mallCart" style="">
+					<div class="mallCartItem">
+						<span class="mallCart_icon">&nbsp;</span>
+						<span class="mallCart_name">购物车</span>
+						<span class="mallCart_proNum">(0)</span>
+						<span class="mallCart_down">&nbsp;</span>
+					</div>
+				</div>
+				<div class="mallCartPanel">
+					<div id="mallCartList_js" class="mallCartList">
+						<div class="mcProductList">您的购物车内暂时没有任何产品。</div>
+						<div class="checkMallCartBtn"  >去购物车结算</div>
+					</div>
+				</div>
+			</div>
+
+	
+	
+		
+			<div id="mobiWeb_line" class="line" style="margin-right: 0px; display:none;"></div>
+	
+			<div style="float:left;  margin-left: 15px;">
+				<div id="mobiWeb_js" class="mobiWeb" style="display:none;">
+					<div class="mobiWebItem">
+						<span class="mobiWeb_icon">&nbsp;</span>
+						<span class="mobi_down">&nbsp;</span>
+					</div>
+				</div>
+				<div class="mobiWebPanel" style="display:none;">
+					<div id="mobiWebQRCode_js" class="mobiWebQRCode">
+						<div style='text-align:center;padding-top:10px;'><img src='/qrCode.jsp?cmd=mobiQR&_s=80'></div>
+						<div style='text-align:center;padding-top:2px;'>查看手机网站</div>
+					</div>
+				</div>
+			</div>	 
+	</div>
+<div class='right'>
+<div style='float:right;'>
+		
+<a class='memberOption memberReg' href='register.html' style='margin-right:10px;'>注册</a>
+<a class='memberOption memberLogin' href='login.html' >登录</a>
+	</div>
+</div>
+
+	
+
+		
+
+		<div id="topBarMsg" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:#eee; text-align:center; z-index: 9010;"></div>
+	</div>
+</div>
+
+	 
+
+
+
+	<div id="g_main" class='g_main g_col2 ' style='top:35px' >
+	<div id="web" class="g_web ">
+		<table class="webTopTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div ；id="webTop" class="webTop">
+						<div class='fkEditor-wrap'><div id='corpTitle' class='corpTitle corpTitle2' fontPatternTitle='false' style='top:36px;left:106px;;'  _linkType='0' ></div></div><div id='logo' class='logo logo2' style='top:17px;left:0px;display:block;'><a id='logoLink' hidefocus='true' class='link-p' link='javascript:;' onclick='return false;'><img id='logoImg' title='学校' alt='学校' style='float:left;' height='73'width='96' src='http://7249253.s21i-7.faiusr.com/2/ABUIABACGAAg3bWctQUouoWOgQUwgCA4gRg!100x100.jpg' /></a></div>
+
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table class="absTopTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="absTopForms" class="forms sideForms absForms">
+						<div style="position:absolute;"></div><!-- for ie6 -->
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table class="webNavTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webNav" class="webNav webNavDefault">
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		<table class="webHeaderTable" cellpadding="0" cellspacing="0" id="webHeaderTable">
+			<tr>
+				<td align="center" class="webHeaderTd">
+					<div id="webHeader" class="webHeader">
+						<table class='headerTable' cellpadding='0' cellspacing='0'>
+							<tr>
+								<td class='headerCusLeft'></td>
+								<td class='headerCusMiddle' align='center' valign='top'>
+									<div class='headerNav'>
+								<div id='nav' class='nav nav2 fixedNavPos '>
+<div class='navMainContent'><table class='navTop' cellpadding='0' cellspacing='0'><tr><td class='navTopLeft'></td><td class='navTopCenter'></td><td class='navTopRight'></td></tr></table>
+<table class='navContent' cellpadding='0' cellspacing='0'>
+<tr>
+<td class='navLeft'></td>
+<td class='navCenterContent' id='navCenterContent' valign='top' align='left'>
+<div id='navCenter' class='navCenter' style='width:904px;'>
+<div class='itemPrev'></div>
+<div class='itemContainer'>
+<table title='' class='item itemCol2 itemIndex1' cellpadding='0' cellspacing='0' colId='2' id='nav2' onclick='window.open("/h-index.html", "_self")'  _jump='window.open("/h-index.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-index.html' target='_self' onclick='return false;'><span class='itemName0'>首页</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol111 itemIndex2' cellpadding='0' cellspacing='0' colId='111' id='nav111' onclick='window.open("/h-col-111.html", "_self")'  _jump='window.open("/h-col-111.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-111.html' target='_self' onclick='return false;'><span class='itemName0'>数学</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol112 itemIndex3' cellpadding='0' cellspacing='0' colId='112' id='nav112' onclick='window.open("/h-col-112.html", "_self")'  _jump='window.open("/h-col-112.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-112.html' target='_self' onclick='return false;'><span class='itemName0'>物理</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol113 itemIndex4' cellpadding='0' cellspacing='0' colId='113' id='nav113' onclick='window.open("/h-col-113.html", "_self")'  _jump='window.open("/h-col-113.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-113.html' target='_self' onclick='return false;'><span class='itemName0'>化学</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol133 itemIndex5' cellpadding='0' cellspacing='0' colId='133' id='nav133' onclick='window.open("/h-col-133.html", "_self")'  _jump='window.open("/h-col-133.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-133.html' target='_self' onclick='return false;'><span class='itemName0'>经济</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol114 itemIndex6' cellpadding='0' cellspacing='0' colId='114' id='nav114' onclick='window.open("/h-col-114.html", "_self")'  _jump='window.open("/h-col-114.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-114.html' target='_self' onclick='return false;'><span class='itemName0'>名校加试</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol136 itemIndex7' cellpadding='0' cellspacing='0' colId='136' id='nav136' onclick='window.open("/h-col-136.html", "_self")'  _jump='window.open("/h-col-136.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-136.html' target='_self' onclick='return false;'><span class='itemName0'>教学辅导资料</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol103 itemIndex8' cellpadding='0' cellspacing='0' colId='103' id='nav103' onclick='window.open("/h-col-103.html", "_self")'  _jump='window.open("/h-col-103.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-103.html' target='_self' onclick='return false;'><span class='itemName0'>实验课程</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol171 itemIndex9' cellpadding='0' cellspacing='0' colId='171' id='nav171' onclick='window.open("/h-col-171.html", "_self")'  _jump='window.open("/h-col-171.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-171.html' target='_self' onclick='return false;'><span class='itemName0'>面试指南</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol105 itemIndex10' cellpadding='0' cellspacing='0' colId='105' id='nav105' onclick='window.open("/h-col-105.html", "_self")'  _jump='window.open("/h-col-105.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-col-105.html' target='_self' onclick='return false;'><span class='itemName0'>UCAS</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+<div class='itemSep'></div><table title='' class='item itemCol9 itemIndex11' cellpadding='0' cellspacing='0' colId='9' id='nav9' onclick='window.open("/h-msgBoard.html", "_self")'  _jump='window.open("/h-msgBoard.html", "_self")' >
+<tr>
+<td class='itemLeft'></td>
+<td class='itemCenter'><a hidefocus='true' style='outline:none;' href='/h-msgBoard.html' target='_self' onclick='return false;'><span class='itemName0'>A-Levels</span></a></td>
+<td class='itemRight'></td>
+</tr>
+</table>
+</div>
+<div class='itemNext'></div>
+</div>
+</td>
+<td class='navRight'></td>
+</tr>
+</table>
+<table class='navBottom' cellpadding='0' cellspacing='0'><tr><td class='navBottomLeft'></td><td class='navBottomCenter'></td><td class='navBottomRight'></td></tr></table>
+</div>
+</div>
+<a href='/h-col-173.html' style='display:none;'>CIE 数学9709</a><a href='/h-col-137.html' style='display:none;'>IGCSE 数学</a><a href='/h-col-138.html' style='display:none;'>IGCSE 物理</a><a href='/h-col-139.html' style='display:none;'>IGCSE 化学</a><a href='/h-col-166.html' style='display:none;'>IGCSE 生物</a><a href='/h-col-164.html' style='display:none;'>IGCSE 地理</a><a href='/h-col-140.html' style='display:none;'>IGCSE 经济</a><a href='/h-col-162.html' style='display:none;'>IGCSE 商科</a><a href='/h-col-163.html' style='display:none;'>IGCSE 会计</a><a href='/h-col-141.html' style='display:none;'>CIE 9702物理</a><a href='/h-col-142.html' style='display:none;'>EDEXCEL 9PH0 物理</a><a href='/h-col-143.html' style='display:none;'>ALEVEL 化学</a><a href='/h-col-148.html' style='display:none;'>ALEVEL 生物</a><a href='/h-col-144.html' style='display:none;'>ALEVEL 地理</a><a href='/h-col-145.html' style='display:none;'>ALEVEL 历史</a><a href='/h-col-146.html' style='display:none;'>ALEVEL 经济</a><a href='/h-col-147.html' style='display:none;'>ALEVEL 商科</a><a href='/h-col-167.html' style='display:none;'>ALEVEL 会计</a><a href='/h-col-150.html' style='display:none;'>CIE 9701化学</a><a href='/h-col-149.html' style='display:none;'>EDEXCEL 9CH0 化学</a><a href='/h-col-151.html' style='display:none;'>IB 化学</a><a href='/h-col-152.html' style='display:none;'>IB 经济</a><a href='/h-col-156.html' style='display:none;'>IB 生物</a><a href='/h-col-153.html' style='display:none;'>IB 地理</a><a href='/h-col-154.html' style='display:none;'>IB 历史</a><a href='/h-col-155.html' style='display:none;'>IB 商务</a><a href='/h-col-168.html' style='display:none;'>IB 英语</a><a href='/h-col-169.html' style='display:none;'>IB 中文</a><a href='/h-col-157.html' style='display:none;'>CIE 9708经济</a><a href='/h-col-174.html' style='display:none;'>EDEXCEL 9EB0 经济 B </a><a href='/h-col-175.html' style='display:none;'>EDEXCEL 9EC0 经济 A </a><a href='/h-col-158.html' style='display:none;'>STEP</a><a href='/h-col-159.html' style='display:none;'>MAT</a><a href='/h-col-161.html' style='display:none;'>PAT</a><a href='/h-col-127.html' style='display:none;'>物理</a><a href='/h-col-128.html' style='display:none;'>化学</a><a href='/h-col-129.html' style='display:none;'>生物</a><a href='/h-col-172.html' style='display:none;'>高端面试</a>
+									</div>
+								</td>
+								<td class='headerCusRight'></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table class="webBannerTable J_webBannerTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webBanner" class="webBanner">
+						<table class="bannerTable" cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="bannerLeft"></td>
+								<td class="bannerCenter" align='center' valign='top'>
+									
+									
+								</td>
+								<td class="bannerRight"></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table class="absMiddleTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="absForms" class="forms sideForms absForms">
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+
+
+		<div id="fullmeasureTopForms" class="fullmeasureContainer forms sideForms fullmeasureForms fullmeasureTopForms" 
+		style='display:none'>
+			
+		<wbr style='display:none;' /></div>
+		
+		<table id="webContainerTable" class="webContainerTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="webContainer" class="webContainer">
+						<div id="container" class="container">
+	<table class="containerTop" cellpadding='0' cellspacing='0'>
+		<tr valign='top'>
+			<td class="left"></td>
+			<td class="center"></td>
+			<td class="right"></td>
+		</tr>
+	</table>
+
+	<table class="containerMiddle" cellpadding='0' cellspacing='0'>
+		<tr valign='top'>
+			<td id="containerMiddleLeft" class="containerMiddleLeft">
+					
+					
+					
+					
+			</td>
+
+			<td class="containerMiddleCenter">
+				<div id="containerMiddleCenterTop" class="containerMiddleCenterTop">
+					
+				</div>
+
+				<div id="containerForms" class="containerForms">
+					<div id="topForms" class="column forms mainForms topForms" >
+						<div id='module361' _indexClass='formIndex1' _modulestyle='1' _moduleid='361'  class='form form361 formIndex1 formStyle1' title='' style='' _side='0' _inTab='0' _inMulMCol='0' _inFullmeasure='0' _inpack='0' _autoHeight='1' _global='false' _independent='false' >
+<table class='formTop formTop361' cellpadding='0' cellspacing='0'><tr><td class='left'></td><td class='center'></td><td class='right'></td></tr></table>
+<table class='formBanner formBanner361' cellpadding='0' cellspacing='0' style=''><tr>
+<td class='left left361'></td>
+<td class='center center361' valign='top'>
+<table cellpadding='0' cellspacing='0' class='formBannerTitle formBannerTitle361'><tr>
+<td class='titleLeft titleLeft361' valign='top'>
+</td>
+<td class='titleCenter titleCenter361' valign='top'>
+<div class='titleText titleText361'><span class='bannerNormalTitle fk_mainTitle mainTitle mainTitle361'>机构介绍</span><div class='bannerTextOutWrap j_doubleTitleSkin'><span class='bannerTextInnerWrap'><span class='doubleTitleWrap doubleTitleWrap361'><p class='mainTitleWrap'><span class='fk_mainTitle mainTitle mainTitle361'>机构介绍</span></p><p class='subTitleWrap'><span class='subTitleLineTop dividingLine dividingLine361'></span><span class='subTitleText fk_auxiliaryTitle auxiliaryTitle auxiliaryTitle361'>副标题</span><span class='subTitleLineBottom dividingLine dividingLine361'></span></p><p class='titleUnderAidLine0 dividingLine dividingLine361'></p></span><p class='titleInnerAidLine0 dividingLine dividingLine361'></p><p class='titleInnerAidLine1 dividingLine dividingLine361'></p><p class='titleInnerAidLine dividingLineDefault dividingLineDefault361'></p></span></div></div>
+</td>
+<td class='titleRight titleRight361' valign='top'>
+</td>
+</tr></table>
+</td>
+<td class='right right361'></td>
+</tr></table>
+<table class='formMiddle formMiddle361' style='' cellpadding='0' cellspacing='0'><tr>
+<td class='formMiddleLeft formMiddleLeft361'></td>
+<td class='formMiddleCenter formMiddleCenter361' valign='top'>
+<div class='formMiddleContent formMiddleContent361' tabStyle='0'>
+<div class='richContent richContent0'><p><span style="font-family:Georgia;font-size:14px;">　　上海群尧商务咨询有限公司（简称：群尧咨询），是致力于ALEVEL、IB、AP等国际课程辅导与培训的专业机构，旨在帮助学员解决在学习ALEVEL、IB、AP等国际课程过程中所遇到的疑难与困惑。快速了解并掌握国际课程的精髓和灵魂，实现世界名校的梦想！</span></p><p><span style="font-family:Georgia;"><span style="font-size:14px;line-height:20.16px;">　　<strong>联系方式：18818275203 曾老师</strong></span></span></p><p><span style="font-family:Georgia;"><span style="font-size:14px;line-height:20.16px;"><strong> &nbsp; &nbsp; &nbsp; 教辅资料购买：淘宝搜索：<strong style="font-family:Georgia;font-size:14px;line-height:20.16px;">群尧咨询</strong></strong></span></span></p><p><span style="font-family:Georgia;"><span style="font-size:14px;line-height:20.16px;"><strong>　　微信号：余老师（昊）</strong></span></span></p><p><img src="http://7249253.s21i-7.faiusr.com/2/ABUIABACGAAghIzHvAUoyILesAcwxQI4xAI.jpg" width="325" height="324" alt=" " /></p></div></div>
+</td>
+<td class='formMiddleRight formMiddleRight361'></td>
+</tr></table>
+<table class='formBottom formBottom361' cellpadding='0' cellspacing='0'><tr><td class='left left361'></td><td class='center center361'></td><td class='right right361'></td></tr></table>
+<div class='clearfloat clearfloat361'></div>
+</div>
+
+
+					</div>
+
+					<table class="containerFormsMiddle" cellpadding='0' cellspacing='0'>
+						<tr>
+							<td valign="top" id="containerFormsLeft" class="containerFormsLeft" style='display:none'>
+								<div class="containerFormsLeftTop">
+								</div>
+								<div id="leftForms" class="column forms sideForms leftForms">
+									
+								</div>
+								<div class="containerFormsLeftBottom">
+								</div>
+							</td>
+
+							<td valign="top" id="containerFormsCenter" class="containerFormsCenter">
+					
+								<div id="centerTopForms" class="column forms mainForms centerTopForms" >
+									
+								</div>
+								<div class="containerFormsCenterMiddle J_containerFormsCenterMiddle">
+									<div id="middleLeftForms" class="column forms mainForms middleLeftForms" style='display:none'
+										
+									>
+									
+									</div>
+									<div id="middleRightForms" class="column forms mainForms middleRightForms" style='display:none'
+										
+									>
+									
+									</div>	
+									<div class="clearfloat"></div>
+								</div>
+								<div id="centerBottomForms" class="column forms mainForms centerBottomForms" style='display:none'>
+									
+								</div>
+							</td>
+
+							<td valign="top" id="containerFormsRight" class="containerFormsRight" style='display:none'>
+								<div class="containerFormsRightTop">
+								</div>
+								<div id="rightForms" class="column forms sideForms rightForms">
+									
+								</div>
+								<div class="containerFormsRightBottom">
+								</div>
+							</td>
+						</tr>
+					</table>
+
+					<div id="bottomForms" class="column forms mainForms bottomForms" style='display:none'>
+						
+					</div>
+
+					<div id="containerPlaceholder" class="containerPlaceholder" ></div>
+					
+				</div>
+
+				<div id="containerMiddleCenterBottom" class="containerMiddleCenterBottom">
+				</div>
+
+			</td>
+
+			<td id="containerMiddleRight" class="containerMiddleRight"></td>
+		</tr>
+	</table>
+	
+	<table class="containerBottom" cellpadding='0' cellspacing='0'>
+		<tr valign='top'>
+			<td class="left"></td>
+			<td class="center"></td>
+			<td class="right"></td>
+		</tr>
+	</table>
+</div>
+
+					</div>
+				</td>
+			</tr>
+		</table>		
+
+		<div id="fullmeasureBottomForms" class="fullmeasureContainer forms sideForms fullmeasureForms fullmeasureBottomForms" 
+		style='display:none'>
+			
+		<wbr style='display:none;' /></div>
+		
+		<table class="absBottomTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center">
+					<div id="absBottomForms" class="forms sideForms absForms">
+						<div style="position:absolute;"></div><!-- for ie6 -->
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+
+		<table id="webFooterTable" class="webFooterTable" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center" valign="top">
+					
+						<div id="webFooter" class="webFooter">
+							<div id='footer' class='footer' ><table class='footerTop' cellpadding='0' cellspacing='0'><tr valign='top'><td class='topLeft'></td><td class='topCenter'></td><td class='topRight'></td></tr></table><table class='footerMiddle' cellpadding='0' cellspacing='0'><tr valign='top'><td class='middleLeft'></td><td class='middleCenter' align='center'><div class='footerContent'><div id='footerNav' class='footerNav  footerPattern1' cusheight='0'><div class='footerItemListBox'><ul class='footerItemListContainer J_footerItemListContainer'><li class='J_footerItemSection footerItemSection'><table class='J_footerItemContainer footerItemContainer'><tr><td class='footerItemContainer-firstTd'><div class='footerItemPic'>                            <a href='javascript:;' class='footerItemNormalPic ' style='text-decoration: none;' id='footerItemPic2' ></a></div></td><td class='footerItemContainer-secondTd'><div class='footerItemContent'><div class='footerItemTop'><a title='' class='footerItemTopLink' href='/h-index.html'  child='0'>首页<span class = 'fk-footerTriangle'></span></a><div class='fk-footerTrianglePlaceholder'></div></div><div class='footerItemMiddle'><div class='footSplitline'></div></div></div></td></tr></table></li><li class='J_footerItemSpacing_end footerItemSpacing footerItemSpacing_end'><div class='footerVerticalLine'></div></li></ul></div></div><div class='footerInfo'><p><font face="Arial">©</font>2015 qyconsult 版权所有</p></div><div class='footerSupport' id='footerSupport'>           <span class='footerMobile'><a hidefocus='true' href='http://m.qyconsult.com' target='_blank'>手机版</a></span>       <span class='footerSep'>|</span>               <span class='footerFaisco'>本站使用<a hidefocus='true' href='http://jz.faisco.com/?_ta=2506' onclick='Site.logDog(100065, 1);' target='_blank'><span class='faisco-icons-logo' id='faisco-icons-logo' style='padding-left:2px;padding-right:2px;position:relative;top:2px;'></span>凡科建站</a><span style='padding-left:8px;'>搭建</span></span>           <span class='footerSep'>|</span>           <span id='footerLogin' class='footerLogin'><a name='popupLogin' hidefocus='true' href='javascript:;' onclick='Site.popupLogin("http://www.faisco.cn",7249253);Fai.closeTip("#footerLogin");return false;'>管理登录</a></span>            <span class='footerSep'>|</span>                <span class='footerBeian'><a hidefocus='true' href='http://www.miitbeian.gov.cn' target='_blank' rel='nofollow'>沪ICP备16019954号</a></span>                    <span class='bgplayerButton' id='bgplayerButton' style='display:none;'></span></div></div></td><td class='middleRight'></td></tr></table><table class='footerBottom' cellpadding='0' cellspacing='0'><tr valign='top'><td class='bottomLeft'></td><td class='bottomCenter'></td><td class='bottomRight'></td></tr></table></div>
+
+						</div>
+						
+					
+				</td>
+			</tr>
+		</table>
+
+		<div class="clearfloat"></div>
+	</div>	
+</div>
+
+
+
+<div class="floatLeftTop">
+	<div id="floatLeftTopForms" class="forms sideForms floatForms">
+		
+	</div>
+</div>
+<div class="floatRightTop">
+	<div id="floatRightTopForms" class="forms sideForms floatForms">
+		
+	</div>
+</div>
+<div class="floatLeftBottom">
+	<div id="floatLeftBottomForms" class="forms sideForms floatForms">
+		
+	</div>
+</div>
+<div class="floatRightBottom">
+	<div id="floatRightBottomForms" class="forms sideForms floatForms">
+		
+	</div>
+</div>
+
+
+
+
+	<div id="bgMusic"  class="bgMusic">
+	
+	</div>	
+
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/jquery/jquery-core.min.js?v=201611071744"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/jquery/jquery-mousewheel.min.js?v=201408111734"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/fai.min.js?v=201611221352"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/jquery/jquery-ui-core.min.js?v=201611221738"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/site.min.js?v=201611241246"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/locale/2052.min.js?v=201611211852"></script>
+<script type="text/javascript" src="http://1.ss.faisys.com/js/comm/ZeroClipboard/ZeroClipboard.min.js?v=201212061014"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+function showYuanDanWindow(){
+	var hasShowYuanDanLuckyGuy = $.cookie("hasShowYuanDanLuckyGuy",{path:"/"});
+	var _hasGetYuanDanLuckyGuy_ = $.cookie("_hasGetYuanDanLuckyGuy_",{path:"/"});
+	var _openbigImg = false;
+	
+	if(_openbigImg == true){
+		if(hasShowYuanDanLuckyGuy == 'true' || _hasGetYuanDanLuckyGuy_ != 'true' ){
+			Site.isShowThreeDaysLuckyGuy = "true";
+			Site.isTenMinutes = 'true';
+			$.cookie("hasShowYuanDanLuckyGuy",false,{path:"/"});
+			Site.drawLottery();
+		}else{
+		
+			Site.sendResult2();	
+		}
+	}	
+}
+
+
+
+	var fk_sale = new Object();	
+	fk_sale.cid = 7249253;
+	fk_sale.siteVer = 50;
+	fk_sale.popupWindowSiteVer = 10;	
+	fk_sale.isLuckyGuyFlag = false;
+	fk_sale.popupWindowEndYear = 2016;
+	fk_sale.popupWindowEndMonth = 11;
+	fk_sale.popupWindowEndDay = 30;
+	fk_sale.popupWindowDays = 1;
+	fk_sale.popupWindowMs = 119810653;
+	fk_sale.openDays = 429;
+	fk_sale.openMinutes = 618084;
+	fk_sale.popupWindowEndSignupHours = 720.0;
+	fk_sale.url = 'http://www.faisco.cn/portal.jsp#appId=shop';	
+	fk_sale.showDomainWindowFlag = false;
+	fk_sale.cacct = 'qyconsult';
+	fk_sale.imgBigSrc = 'http://jz.faisys.com/image/pro/20161101/salesPromotion.png?v=201611091538';
+	fk_sale.imgBigBtn = 'http://jz.faisys.com/image/pro/20161101/btn_buy.png?v=201611091538';
+	fk_sale.imgClose = 'http://jz.faisys.com/image/pro/20161101/close.png?v=201611091538';
+	fk_sale.siteFirstLogin = false;
+	fk_sale.isShowAdvertisementWindowThreeMinute = false;
+	fk_sale.textUrl = 'http://www.faisco.cn/portal.jsp#appId=shop';
+	fk_sale.domainImgBigBg = 'http://jz.faisys.com/image/pro/20160101/domainSearchImg.png';
+	fk_sale.domainImgClose = 'http://jz.faisys.com/image/pro/20160101/close.png?v=201601181937';
+	fk_sale.siteBizBigClose = 'http://jz.faisys.com/image/pro/20160701/close_popup.png';
+	fk_sale.siteBizBigBg = 'http://jz.faisys.com/image/pro/20160701/popup02.png';
+	fk_sale.showSiteBizWindow = false;
+	fk_sale.showSitePopWindow = false;
+	fk_sale.openFlyer = false;
+
+
+</script>
+
+
+
+
+	
+
+<link type='text/css' href=http://2.ss.faisys.com/css/fontsIco.min.css?v=201610311810 rel='stylesheet' />
+
+
+
+
+
+
+<script type="text/javascript">
+// 为了避免用户误操作，在域名结尾输入多余字符导致cookie失效问题，这里校验一下浏览器的host是否与后台拿到的host一致
+//if (window.location.host != 'www.qyconsult.com') { window.location.href = 'http://' + 'www.qyconsult.com'; }
+//console.log(window.location.host.lastIndexOf("."));
+
+var _faiAjax = function(){
+	//for regexp
+	var r = /\?/;
+	var _o = {
+		type:"get",
+		url:"",
+		data:"",
+		error:function(){},
+		success:function(){}
+	};
+	var _sendRequest=function(o) {
+		var xmlhttp = null;
+		//init option code
+		o.type = o.type || _o.type;
+		o.url = o.url || _o.url;
+		o.data = o.data || _o.data;
+		o.error = o.error || _o.error;
+		o.success = o.success || _o.success;
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp=new XMLHttpRequest();
+		}else{
+			// code for IE6, IE5
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		//the instructions param takes the form of an eval statement
+		if(o.type != "post") {
+			o.url += ( this.r.test( o.url ) ? "&" : "?" ) + o.data;
+			xmlhttp.open("GET", o.url, true);
+				xmlhttp.onreadystatechange=function() {
+				if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					o.success( xmlhttp.responseText );
+				}else if( o.error ){
+					o.error();
+				}
+			}
+			xmlhttp.send();
+		} else {
+			xmlhttp.open("POST", o.url, true);
+			//Send the proper header information along with the request
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
+			xmlhttp.onreadystatechange=function() {
+				if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					o.success( xmlhttp.responseText );
+				}else{
+					o.error();
+				}
+			}
+			xmlhttp.send(o.data);
+		}
+	}
+	return {
+		ajax:function(option){
+			try {
+				//此次调用的错误不让抛出给window。防止函数重入
+				_sendRequest(option);	
+			}catch(e){
+				//alert(e);
+			}
+		}
+	};
+}();
+var _jsErrCahche = [];
+window.onerror = function(sMsg,sUrl,sLine){
+	if (typeof Site == 'undefined') {
+		alert('您的网页未加载完成，请尝试按“CTRL+功能键F5”重新加载。');
+	}
+	if( sLine < 1 || typeof sMsg != 'string' || sMsg.length < 1 ){
+		return;
+	}
+	
+	var log = "Error:" + sMsg + ";Line:" + sLine + ";Url:" + sUrl;
+	var alertLog = "Error:"+sMsg+"\n" + "Line:" + sLine + "\n" + "Url:" + sUrl + "\n";
+	var encodeUrl = function (url){
+		return typeof url === "undefined" ? "" : encodeURIComponent(url);
+	};
+	
+	var ajax = true;
+	var obj = { 'm' : sMsg, 'u' : sUrl, 'l' : sLine };
+	for( var i = 0; i < _jsErrCahche.length; i ++ ){
+		if( _jsErrCahche[i].m == obj.m && _jsErrCahche[i].u == obj.u && _jsErrCahche[i].l == obj.l  ){
+			ajax = false;
+			break;
+		}
+	}
+	
+	if( ajax ){
+		_jsErrCahche.push( obj );
+		_faiAjax.ajax({
+			type	: "post",
+			url		: "ajax/logJsErr_h.jsp?cmd=jsErr",
+			data	: 'msg='+ encodeUrl(log)
+		});
+	}
+	if(false){
+		alert( alertLog );
+	}
+};
+Fai.top = window;
+var bgmCloseToOpen = false;
+var _debug = false;
+var _devMode = false;
+var _colOtherStyleData = {"independentList":[],"y":0,"h":0,"layout4Width":0,"layout5Width":0};						// 当前页面的数据    
+var _templateOtherStyleData = {"independentList":[],"h":904,"y":0,"layout4Width":0,"layout5Width":0};						// 全局的数据
+
+$(function() {
+	
+	//Site.changeTheLogoSize();
+	Site.showOrHideMailBox();
+	
+	
+    	
+	var hasLoginSite = $.cookie('hasLoginSite');
+	if(hasLoginSite == "true" && hasLoginSite != null){	
+		$.cookie('hasLoginSite','false', { expires: 1, path: '/' } );
+		Site.changeAdmHref('qyconsult','faisco.cn');
+	}
+	if(false){
+		Fai.ing("",true);
+	}
+	//topBarMember 
+	
+	
+	// 管理态下, QQ/微博登陆 禁止登陆
+	//if( _manageMode ) {
+		// $('#memberBar .l_Btn').click(function(){
+		// 	Fai.ing('您目前处于网站管理状态，请先点击网站右上方的“退出”后再登录会员。', true);
+		// });
+		//绑定放大镜遮罩效果事件
+		//Site.bindEventToOverLayer();		
+	//}
+	
+
+	// 绑定退出事件
+	$(window).bind("beforeunload", function(e) { 
+		 
+			if(bgmCloseToOpen){
+				Site.bgmFlushContinue();
+			}	
+	
+	
+		
+	
+	
+	
+	});
+	Site.initTemplateLayout(1, true, false );
+	// spider统计
+	
+
+
+
+	
+	// ajax统计
+	Site.total({colId:2, pdId:-1, ndId:-1, sc:0, rf:""});
+	//前端性能数据上报
+	//Site.report();
+	//保留旧用户的初始化版式区域4 和区域5 中，区域4的padding-right空间
+	Site.colLayout45Width();
+	//各个模块inc吐出脚本
+	Site.initCorpTitleJump();
+Site.initCorpTitleContent("primaryTitle", "上海群尧咨询", "pointer-events:none;");
+Site.hoverChangeImage();Site.hoverStyle();
+
+	
+
+
+	Site.initPage();	// 这个要放在最后，因为模块组初始化时会把一些模块隐藏，导致没有高度，所以要放最后执行
+
+	$(document).bind('contextmenu copy paste cut',function(event){if($(event.target).is('input, textarea')){return;alert(1);}else{return false;}});
+if(Fai.isIE6() || Fai.isIE7() || Fai.isIE8()){$(document).bind('selectstart',function(event){if($(event.target).is('input, textarea')){return;}else{return false;}});}
+
+	
+	
+	setTimeout(afterModuleLoaded, 0);
+
+	if( _manageMode ) {
+	
+		Site.initManagePage();
+		
+		
+	}
+
+	
+	
+
+	Site.triggerGobalEvent("siteReadyLoad");
+});
+
+function afterModuleLoaded() {
+	Site.initPage2();
+Site.initBackToTopTool(false,true, '回到顶部','null');
+	
+	//Site.mallCartInit(_colId);
+	//Site.mobiWebInit();
+	
+	
+	
+	
+	
+} // afterModuleLoaded end
+
+var _lcid = 2052;
+var _userHostName = 'www.qyconsult.com';
+var _siteDomain = 'http://www.qyconsult.com';
+var _openDays = 429;
+var _openHours = 10301;
+var _resRoot = 'http://0.ss.faisys.com';
+var _colId = 2;
+var _extId = 0;
+var _fromColId = -1;
+var _designAuth = false;
+var _manageMode = false;
+var _oem = false;
+var _siteAuth = 0;
+var _adm = false;
+var _siteVer = 50;
+var _manageStatus = false;
+var _webRightBar = false;
+
+
+
+var nav2SubMenu=[];
+var nav111SubMenu=[{"hidden":false,"colId":173,"href":"/h-col-173.html","target":" target='_self'","colName":"CIE 数学9709","html":"<span class='itemName0'>CIE 数学9709<\/span>","title":""},{"hidden":false,"colId":137,"href":"/h-col-137.html","target":" target='_self'","colName":"IGCSE 数学","html":"<span class='itemName0'>IGCSE 数学<\/span>","title":""},{"hidden":false,"colId":138,"href":"/h-col-138.html","target":" target='_self'","colName":"IGCSE 物理","html":"<span class='itemName0'>IGCSE 物理<\/span>","title":""},{"hidden":false,"colId":139,"href":"/h-col-139.html","target":" target='_self'","colName":"IGCSE 化学","html":"<span class='itemName0'>IGCSE 化学<\/span>","title":""},{"hidden":false,"colId":166,"href":"/h-col-166.html","target":" target='_self'","colName":"IGCSE 生物","html":"<span class='itemName0'>IGCSE 生物<\/span>","title":""},{"hidden":false,"colId":164,"href":"/h-col-164.html","target":" target='_self'","colName":"IGCSE 地理","html":"<span class='itemName0'>IGCSE 地理<\/span>","title":""},{"hidden":false,"colId":140,"href":"/h-col-140.html","target":" target='_self'","colName":"IGCSE 经济","html":"<span class='itemName0'>IGCSE 经济<\/span>","title":""},{"hidden":false,"colId":162,"href":"/h-col-162.html","target":" target='_self'","colName":"IGCSE 商科","html":"<span class='itemName0'>IGCSE 商科<\/span>","title":""},{"hidden":false,"colId":163,"href":"/h-col-163.html","target":" target='_self'","colName":"IGCSE 会计","html":"<span class='itemName0'>IGCSE 会计<\/span>","title":""}];
+var nav112SubMenu=[{"hidden":false,"colId":141,"href":"/h-col-141.html","target":" target='_self'","colName":"CIE 9702物理","html":"<span class='itemName0'>CIE 9702物理<\/span>","title":""},{"hidden":false,"colId":142,"href":"/h-col-142.html","target":" target='_self'","colName":"EDEXCEL 9PH0 物理","html":"<span class='itemName0'>EDEXCEL 9PH0 物理<\/span>","title":""},{"hidden":false,"colId":143,"href":"/h-col-143.html","target":" target='_self'","colName":"ALEVEL 化学","html":"<span class='itemName0'>ALEVEL 化学<\/span>","title":""},{"hidden":false,"colId":148,"href":"/h-col-148.html","target":" target='_self'","colName":"ALEVEL 生物","html":"<span class='itemName0'>ALEVEL 生物<\/span>","title":""},{"hidden":false,"colId":144,"href":"/h-col-144.html","target":" target='_self'","colName":"ALEVEL 地理","html":"<span class='itemName0'>ALEVEL 地理<\/span>","title":""},{"hidden":false,"colId":145,"href":"/h-col-145.html","target":" target='_self'","colName":"ALEVEL 历史","html":"<span class='itemName0'>ALEVEL 历史<\/span>","title":""},{"hidden":false,"colId":146,"href":"/h-col-146.html","target":" target='_self'","colName":"ALEVEL 经济","html":"<span class='itemName0'>ALEVEL 经济<\/span>","title":""},{"hidden":false,"colId":147,"href":"/h-col-147.html","target":" target='_self'","colName":"ALEVEL 商科","html":"<span class='itemName0'>ALEVEL 商科<\/span>","title":""},{"hidden":false,"colId":167,"href":"/h-col-167.html","target":" target='_self'","colName":"ALEVEL 会计","html":"<span class='itemName0'>ALEVEL 会计<\/span>","title":""}];
+var nav113SubMenu=[{"hidden":false,"colId":150,"href":"/h-col-150.html","target":" target='_self'","colName":"CIE 9701化学","html":"<span class='itemName0'>CIE 9701化学<\/span>","title":""},{"hidden":false,"colId":149,"href":"/h-col-149.html","target":" target='_self'","colName":"EDEXCEL 9CH0 化学","html":"<span class='itemName0'>EDEXCEL 9CH0 化学<\/span>","title":""},{"hidden":false,"colId":151,"href":"/h-col-151.html","target":" target='_self'","colName":"IB 化学","html":"<span class='itemName0'>IB 化学<\/span>","title":""},{"hidden":false,"colId":152,"href":"/h-col-152.html","target":" target='_self'","colName":"IB 经济","html":"<span class='itemName0'>IB 经济<\/span>","title":""},{"hidden":false,"colId":156,"href":"/h-col-156.html","target":" target='_self'","colName":"IB 生物","html":"<span class='itemName0'>IB 生物<\/span>","title":""},{"hidden":false,"colId":153,"href":"/h-col-153.html","target":" target='_self'","colName":"IB 地理","html":"<span class='itemName0'>IB 地理<\/span>","title":""},{"hidden":false,"colId":154,"href":"/h-col-154.html","target":" target='_self'","colName":"IB 历史","html":"<span class='itemName0'>IB 历史<\/span>","title":""},{"hidden":false,"colId":155,"href":"/h-col-155.html","target":" target='_self'","colName":"IB 商务","html":"<span class='itemName0'>IB 商务<\/span>","title":""},{"hidden":false,"colId":168,"href":"/h-col-168.html","target":" target='_self'","colName":"IB 英语","html":"<span class='itemName0'>IB 英语<\/span>","title":""},{"hidden":false,"colId":169,"href":"/h-col-169.html","target":" target='_self'","colName":"IB 中文","html":"<span class='itemName0'>IB 中文<\/span>","title":""}];
+var nav133SubMenu=[{"hidden":false,"colId":157,"href":"/h-col-157.html","target":" target='_self'","colName":"CIE 9708经济","html":"<span class='itemName0'>CIE 9708经济<\/span>","title":""},{"hidden":false,"colId":174,"href":"/h-col-174.html","target":" target='_self'","colName":"EDEXCEL 9EB0 经济 B ","html":"<span class='itemName0'>EDEXCEL 9EB0 经济 B <\/span>","title":""},{"hidden":false,"colId":175,"href":"/h-col-175.html","target":" target='_self'","colName":"EDEXCEL 9EC0 经济 A ","html":"<span class='itemName0'>EDEXCEL 9EC0 经济 A <\/span>","title":""}];
+var nav114SubMenu=[{"hidden":false,"colId":158,"href":"/h-col-158.html","target":" target='_self'","colName":"STEP","html":"<span class='itemName0'>STEP<\/span>","title":""},{"hidden":false,"colId":159,"href":"/h-col-159.html","target":" target='_self'","colName":"MAT","html":"<span class='itemName0'>MAT<\/span>","title":""},{"hidden":false,"colId":161,"href":"/h-col-161.html","target":" target='_self'","colName":"PAT","html":"<span class='itemName0'>PAT<\/span>","title":""}];
+var nav136SubMenu=[];
+var nav103SubMenu=[{"hidden":false,"colId":127,"href":"/h-col-127.html","target":" target='_self'","colName":"物理","html":"<span class='itemName0'>物理<\/span>","title":""},{"hidden":false,"colId":128,"href":"/h-col-128.html","target":" target='_self'","colName":"化学","html":"<span class='itemName0'>化学<\/span>","title":""},{"hidden":false,"colId":129,"href":"/h-col-129.html","target":" target='_self'","colName":"生物","html":"<span class='itemName0'>生物<\/span>","title":""}];
+var nav171SubMenu=[{"hidden":false,"colId":172,"href":"/h-col-172.html","target":" target='_self'","colName":"高端面试","html":"<span class='itemName0'>高端面试<\/span>","title":""}];
+var nav105SubMenu=[];
+var nav9SubMenu=[];
+
+var _customBackgroundData = {"styleDefault":true,"s":true,"h":false,"r":3,"o":"","sw":-1,"e":0,"wbh":-1,"wbw":-1,"clw":-1,"crw":-1,"id":"","p":"","bBg":{"y":0,"r":3,"f":"","p":"","c":"#000"},"cBg":{"y":0,"r":3,"f":"","p":"","c":"#000"},"cmBg":{"y":0,"r":3,"f":"","p":"","c":"#000"},"bm":{},"cm":{}};          //自定义的数据
+var _templateBackgroundData = {"id":"","bBg":{"c":"#000","f":"","r":3,"p":"","y":0},"cBg":{"c":"#000","f":"","r":3,"p":"","y":0},"cmBg":{"c":"#000","f":"","r":3,"p":"","y":0},"sw":960,"s":true,"h":false,"r":3,"o":"","e":0,"wbh":-1,"wbw":-1,"clw":-1,"crw":-1,"p":"","bm":{},"cm":{}};// 模版的数据
+var _useTemplateBanner = true;				// 是否使用全局模版
+var _templateBannerData = {"ce":{},"pl":0,"l":[{"i":"ABUIABACGAAg78CarwUouY6p7AYwwAc4-AI","p":"http://7249253.s21i-7.faiusr.com/2/ABUIABACGAAg78CarwUouY6p7AYwwAc4-AI.jpg","w":960,"h":380,"tp":"http://7249253.s21i-7.faiusr.com/2/ABUIABACGAAg78CarwUouY6p7AYwwAc4-AI!100x100.jpg"}],"n":[{"t":1,"i":"ABUIABACGAAg78CarwUouY6p7AYwwAc4-AI","ot":1,"e":0,"u":"","p":"http://7249253.s21i-7.faiusr.com/2/ABUIABACGAAg78CarwUouY6p7AYwwAc4-AI.jpg","w":960,"h":380,"el":"","er":""}],"s":4,"h":true,"i":4000,"a":1500,"o":false,"t":1,"p":0,"pt":0,"bt":1,"ws2":false,"f":{},"c":3,"at":0,"ws":false};		// 模版的数据
+var _pageBannerData = {"s":0,"i":4000,"a":1500,"h":false,"o":false,"t":1,"p":0,"pt":0,"pl":0,"bt":1,"ws2":false,"l":[],"f":{},"ce":{},"n":[],"c":3,"at":0,"ws":false};					// 当前页面的自定义数据（页面独立样式设置）
+var _bannerData = _templateBannerData;
+
+var _mallOpen = true;
+
+
+var _navStyleChanged = 0;
+var _navItemOnCkOpen = false;					  // 有下级菜单不可点击
+var _navStyleData = {"no":true,"s":0,"ns":{"w":-1,"h":-1},"cs":{"w":-1,"h":-1},"np":{},"ncp":{"y":0,"t":90,"r":-1,"b":-1,"l":0,"hl":469,"ht":-109},"cp":{"y":0,"t":0,"l":0},"nis":{"w":-1,"h":-1},"gt":{"f":"SimSun","s":12,"w":0,"c":"#000","y":0},"ht":{"c":"#000","y":0},"nb":{"c":"#000","f":"","r":0,"p":"","y":0},"cb":{"c":"#000","f":"","r":0,"p":"","y":0},"nib":{"c":"#000","r":0,"f":"","p":"","y":0},"nihb":{"c":"#000","r":0,"f":"","p":"","y":0},"niss":{"w":-1,"h":-1},"nisb":{"c":"#000","r":0,"f":"","p":"","y":0},"nsigt":{"f":"宋体","s":12,"w":0,"c":"#000","y":0},"nsiht":{"c":"#000","y":0},"nsis":{"w":-1,"h":-1},"nsib":{"c":"#000","r":0,"f":"","p":"","y":0},"nsihb":{"c":"#000","r":0,"f":"","p":"","y":0},"nsiho":0,"nmove":0,"v":2,"nsmt":{},"nsmb":{},"nrs":{"n":{"t":0},"c":{"t":0},"i":{"t":0},"smt":{"t":0},"smb":{"t":0},"si":{"t":0},"is":{"t":0},"sis":{"t":0},"tmt":{"t":0},"tmb":{"t":0},"ti":{"t":0},"tis":{"t":0}},"nsw":{"n":{"t":0},"c":{"t":0},"i":{"t":0},"sm":{"t":0},"si":{"t":0},"is":{"t":0},"sis":{"t":0}},"nbr":{"n":{"t":0},"i":{"t":0},"sm":{"t":0},"si":{"t":0},"is":{"t":0},"sis":{"t":0},"tm":{"t":0},"ti":{"t":0},"tis":{"t":0}},"ntmt":{},"ntmb":{}};				      // 栏目导航样式
+var _navHidden =false;                                  //true:隐藏；flase：显示
+var _navPositionFixTop =  false;        		  // 导航栏固定到顶部
+var _navHeightChange = true;						  //导航栏高度改变，逻辑分界点2015-08-21
+var _siteDemo = false;
+
+
+
+var _backToTop = true;
+var _aid = 7249253;
+var _cloneAid = 8575250;
+var _templateLayout = 1;
+var _webBannerHeight = -1;
+var _isTemplateVersion2 = false;
+var _uiMode= false;
+//20160817 jack smallLanguage flag
+var _smallLanguage = false;
+var _moduleAnimationPercent = -1;
+
+
+
+</script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+var fk_old_onload = window.onload;
+window.onload = function(){
+		if(typeof fk_old_onload == "function"){
+			fk_old_onload.apply(this, arguments);
+		}
+		
+		
+
+		
+			Site.userReadyOperateSite();
+		Site.pageOnload();
+
+		
+		
+		
+		
+};
+
+
+
+
+	$LAB.script("http://1.ss.faisys.com/js/photoSlide.min.js?v=201605161742");
+	$LAB.script("http://1.ss.faisys.com/js/imageEffect.min.js?v=201611011548")
+		.wait(function () {
+			jzUtils.trigger({
+				"name": "ImageEffect.FUNC.BASIC.Init",
+				"base":Site
+			});
+		});
+		
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+

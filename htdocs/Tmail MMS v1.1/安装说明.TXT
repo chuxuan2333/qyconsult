@@ -1,0 +1,37 @@
+安装说明
+
+解压缩文件之后，按照如下目录结构安装
+
+  
+http://www.yourweb.com/maillist/install/
+http://www.yourweb.com/maillist/ 
+http://www.yourweb.com/about.php 
+http://www.yourweb.com/必读.txt
+http://www.yourweb.com/安装说明.txt 
+http://www.yourweb.com/index.php 
+http://www.yourweb.com/授权.php 
+
+
+如果你的系统中已经存在index.php，你可以将Tmail MMS的index.php修改为letter.php或mail.php
+
+确认以下文件的属性为“可写”的
+
+globals.php 
+temp/ 
+uploads/ 
+
+ 
+ 
+
+网址 ( 使用绝对网址 )
+http://www.yourname.com/ 
+
+mailist安装路径
+maillist/ 
+
+Relative string ( 根据index.php 说明设置 )
+letter.php?page=mail& 
+
+现在打开
+http://www.yourname.com/letter.php（index.php/mail.php）
+进行测试

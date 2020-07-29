@@ -1,0 +1,35 @@
+<?php 
+$main_dir = "maillist/";
+$website = "http://localhost/mailOK/";
+$relative_string="index.php?page=mail&";
+$absolute_path="D:/usr/www/mailOK/maillist/";
+$lang="lang_chinese.php";
+$email_name="Yourname";
+$email_email="admin@mysite.com";
+$email_thank_title="感谢你的使用";
+$email_thank_message=stripslashes("感谢你使用我们的邮件订阅系统,我们会把最新的信息及时发送给你.");
+$email_unsubscribe_message=stripslashes("点击此处取消订阅 {ulink}link{/ulink} !");
+$email_verify_message=stripslashes("点击此处确认订阅 {slink}subscription{/slink} !");
+$email_unsubscribe="yes";
+$email_thank="no";
+$email_verify="no";
+$email_images="yes";
+$user="admin";
+$pass="admin888";
+$database="mysql";
+$dbhostname="localhost";
+$dbusername="root";
+$dbpassword="root";
+$dbname="maillist";
+$dbtable="";
+$userfield="";
+$emailfield="";
+$mserver="php";
+$sendmail_string="";
+$smtp_string="";
+$smtp_auth="no";
+$smtp_username="";
+$smtp_password="";
+$charsettype="gb2312";
+$priorityemail="3";
+?>

@@ -1,0 +1,9 @@
+Tmail MMS Ver1.1
+ (Toll Mailing list manager System 1.1 )
+
+添加了发送html格式邮件
+添加了邮件模版功能
+
+获取帮助，请访问http://www.cms8.com/bbs
+如果你发现了BUGS或有什么建议请在我们的论坛提出,我们会在下个版本中改进.
+
